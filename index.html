@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scam Check</title>
+  <meta name="description" content="Paste a message you're not sure about. See what looks wrong and what to do next. Checked on your phone, never saved.">
+  <meta name="theme-color" content="#F4F6F9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151B28" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231C2740'/%3E%3Cpath d='M7 19c4 3 7 4 9 1s4-9 9-11' fill='none' stroke='%23E8574F' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 20c4 3 8 4 10 1s4-10 12-12" /></svg>
+        <span data-t="title">Scam Check</span>
+      </div>
+      <div class="lang" role="group" aria-label="Language / भाषा">
+        <button type="button" data-lang="en" aria-pressed="true">English</button>
+        <button type="button" data-lang="hi" aria-pressed="false" lang="hi">हिंदी</button>
+      </div>
+    </header>
+
+    <section class="ask" aria-labelledby="ask-title">
+      <h1 id="ask-title" data-t="ask">Got a message you're not sure about?</h1>
+      <p class="lede" data-t="lede">Paste it here. Scam Check shows what looks wrong in it and what to do next.</p>
+
+      <form id="check-form" novalidate>
+        <label for="msg" class="field-label" data-t="label">The message</label>
+        <textarea id="msg" rows="6" autocomplete="off" autocapitalize="sentences" spellcheck="false" data-tp="placeholder" placeholder="Paste or type the message here"></textarea>
+        <p class="privacy-line" id="privacy-line"></p>
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+        <div class="actions">
+          <button type="submit" class="primary" data-t="check">Check message</button>
+        </div>
+      </form>
+
+      <div class="examples">
+        <span data-t="examples">Or try an example:</span>
+        <button type="button" class="chip" data-example="electricity" data-t="ex_electricity">Electricity bill</button>
+        <button type="button" class="chip" data-example="kyc" data-t="ex_kyc">KYC update</button>
+        <button type="button" class="chip" data-example="job" data-t="ex_job">Job offer</button>
+        <button type="button" class="chip" data-example="otp" data-t="ex_otp">Bank OTP</button>
+      </div>
+    </section>
+
+    <section class="result" id="result" aria-live="polite" hidden>
+      <div class="verdict" id="verdict">
+        <h2 id="verdict-title" tabindex="-1"></h2>
+        <svg class="pen-stroke" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 C 60 3, 120 12, 180 6 S 270 4, 298 8" /></svg>
+        <p class="verdict-do" id="verdict-do"></p>
+      </div>
+
+      <figure class="marked">
+        <blockquote class="bubble" id="bubble"></blockquote>
+        <figcaption id="bubble-caption"></figcaption>
+      </figure>
+
+      <div class="reasons" id="reasons-wrap">
+        <h3 data-t="noticed">What Scam Check noticed</h3>
+        <ol class="reasons-list" id="reasons"></ol>
+        <p class="link-status" id="link-status" hidden></p>
+      </div>
+
+      <div class="next">
+        <h3 data-t="next">What to do now</h3>
+        <div class="next-block urgent">
+          <p class="next-q" data-t="lost_q">Already tapped the link, shared a code or paid?</p>
+          <p data-t="lost_a">Call 1930 now (National Cyber Crime Helpline), then file a complaint at <a href="https://cybercrime.gov.in" rel="noopener" target="_blank" data-track="cybercrime">cybercrime.gov.in</a>.</p>
+          <a class="call" href="tel:1930" data-track="1930"><span data-t="call">Call 1930</span></a>
+          <p data-t="bank">Call your bank on the number printed on your card or on its official website, never one given in the message.</p>
+        </div>
+        <div class="next-block">
+          <p class="next-q" data-t="report_q">Nothing lost, but it looks like fraud?</p>
+          <p data-t="report_a">Report it on Chakshu at <a href="https://sancharsaathi.gov.in/sfc/" rel="noopener" target="_blank" data-track="chakshu">sancharsaathi.gov.in/sfc</a> within 30 days.</p>
+        </div>
+        <div class="next-block" id="pib-block">
+          <p class="next-q" data-t="pib_q">Is it about a Government of India scheme?</p>
+          <p data-t="pib_a">Forward it to PIB Fact Check on WhatsApp: <a href="https://wa.me/918799711259" rel="noopener" target="_blank" data-track="pib">+91 8799711259</a>.</p>
+        </div>
+        <p class="fine" data-t="fine">This is a second opinion, not a guarantee. Scam Check can be wrong. Never share your OTP, UPI PIN, card number or CVV. You don't need a UPI PIN to receive money.</p>
+      </div>
+
+      <div class="feedback" id="feedback">
+        <p class="feedback-q" data-t="helped_q">Did this help you decide?</p>
+        <div class="feedback-buttons">
+          <button type="button" data-feedback="yes" data-t="yes">Yes</button>
+          <button type="button" data-feedback="no" data-t="no">No</button>
+        </div>
+        <button type="button" class="text-button" id="wrong" data-t="wrong">This result is wrong</button>
+        <p class="feedback-thanks" id="feedback-thanks" role="status" hidden></p>
+      </div>
+
+      <div class="after">
+        <a class="share" id="share" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" /></svg>
+          <span data-t="share">Send this result to family</span>
+        </a>
+        <p class="share-note" data-t="share_note">Sends the result on WhatsApp, not your message.</p>
+        <button type="button" class="secondary" id="again" data-t="again">Check another message</button>
+      </div>
+    </section>
+
+    <footer class="colophon">
+      <details>
+        <summary data-t="privacy_title">How Scam Check handles your message</summary>
+        <div id="privacy-body"></div>
+      </details>
+      <p data-t="made">Made by Krupa Nirmal as an open project, built with the people it's for.</p>
+      <p><span data-t="contact">Questions or a wrong result?</span> <a href="mailto:krupa.nirmal2003@gmail.com">krupa.nirmal2003@gmail.com</a></p>
+    </footer>
+  </main>
+
+  <script src="src/config.js"></script>
+  <script src="src/rules.js"></script>
+  <script src="src/strings.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>

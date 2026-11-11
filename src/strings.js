@@ -1,0 +1,146 @@
+// Interface text in English and Hindi. Keys ending in _html contain links and are set as HTML (our own text only).
+window.SCAM_STRINGS = {
+  en: {
+    title: "Scam Check",
+    ask: "Got a message you're not sure about?",
+    lede: "Paste it here. Scam Check shows what looks wrong in it and what to do next.",
+    label: "The message",
+    placeholder: "Paste or type the message here",
+    privacy_local: "Checked on this phone. The message isn't sent anywhere or saved.",
+    privacy_links: "Checked on this phone and never saved. Only the links in it are looked up on Google's list of unsafe sites.",
+    tip: "Remove names, account numbers and OTPs first if you can. Long numbers are hidden for you.",
+    check: "Check message",
+    empty: "Paste a message first, then tap Check message.",
+    examples: "Or try an example:",
+    ex_electricity: "Electricity bill",
+    ex_kyc: "KYC update",
+    ex_job: "Job offer",
+    ex_otp: "Bank OTP",
+
+    v_likely_scam: "This looks like a scam.",
+    do_likely_scam: "Don't tap the link, don't call the number, and don't share any code or PIN.",
+    v_suspicious: "This looks suspicious.",
+    do_suspicious: "Don't act on it yet. Check with the company yourself, using its official app or the number on your card or bill.",
+    v_unsure: "Scam Check isn't sure about this one.",
+    do_unsure: "There's too little to go on. Be careful, and check with the sender on a number you already have.",
+    v_no_signs: "No common warning signs found.",
+    do_no_signs: "That doesn't mean it's safe. If it asks for money, a code or a click, check with the sender yourself first.",
+
+    caption_marked: "Marked words match the numbered reasons below.",
+    caption_plain: "Nothing in the message matched a common warning sign.",
+    noticed: "What Scam Check noticed",
+    noticed_none: "None of the warning signs Scam Check looks for.",
+    links_checking: "Looking up the links on Google's unsafe-site list…",
+    links_bad: "Google lists this link as unsafe: {hosts}",
+    links_clean: "The links aren't on Google's unsafe list. New scam sites often aren't listed yet, so this proves nothing.",
+    links_failed: "The link lookup didn't work just now. The result above doesn't include it.",
+    link_reason: "Google lists a link in this message as unsafe",
+    lang_hint: "हिंदी में देखें",
+
+    next: "What to do now",
+    lost_q: "Already tapped the link, shared a code or paid?",
+    lost_a_html: 'Call 1930 now (National Cyber Crime Helpline), then file a complaint at <a href="https://cybercrime.gov.in" rel="noopener" target="_blank" data-track="cybercrime">cybercrime.gov.in</a>.',
+    call: "Call 1930",
+    bank: "Call your bank on the number printed on your card or on its official website, never one given in the message.",
+    report_q: "Nothing lost, but it looks like fraud?",
+    report_a_html: 'Report it on Chakshu at <a href="https://sancharsaathi.gov.in/sfc/" rel="noopener" target="_blank" data-track="chakshu">sancharsaathi.gov.in/sfc</a> within 30 days.',
+    pib_q: "Is it about a Government of India scheme?",
+    pib_a_html: 'Forward it to PIB Fact Check on WhatsApp: <a href="https://wa.me/918799711259" rel="noopener" target="_blank" data-track="pib">+91 8799711259</a>.',
+    fine: "This is a second opinion, not a guarantee. Scam Check can be wrong. Never share your OTP, UPI PIN, card number or CVV. You don't need a UPI PIN to receive money.",
+
+    helped_q: "Did this help you decide?",
+    yes: "Yes",
+    no: "No",
+    wrong: "This result is wrong",
+    thanks: "Thanks. Your answer is counted, your message isn't kept.",
+    thanks_wrong: "Thanks for telling us. Wrong results are counted so the checker can be fixed.",
+
+    share: "Send this result to family",
+    share_note: "Sends the result on WhatsApp, not your message.",
+    share_text: "I checked a message on Scam Check.\n\n{verdict}\n{reasons}\n{do}\n\nLost money? Call 1930.\n{url}",
+    again: "Check another message",
+
+    privacy_title: "How Scam Check handles your message",
+    privacy_html:
+      "<p><strong>Your message</strong> is checked by code running on this phone. It isn't sent to anyone and isn't saved.</p>" +
+      "{links}" +
+      "<p><strong>What is counted:</strong> that a check happened, the verdict, which warning signs showed up, your Yes or No answer, taps on the help links, and where you came from (like a link shared on LinkedIn). Never the message text, names or numbers.</p>" +
+      "<p><strong>A random ID</strong> is kept in this browser to count return visits. It isn't linked to you. Clearing your browser data removes it.</p>" +
+      "<p><strong>No login</strong> and no phone number are ever asked for.</p>",
+    privacy_links_html: "<p><strong>Links only:</strong> the web links found in the message, and nothing else, are sent to a small lookup service that asks Google Safe Browsing whether they are known to be unsafe. The lookup keeps nothing.</p>",
+    made: "Made by Krupa Nirmal as an open project, built with the people it's for.",
+    contact: "Questions or a wrong result?",
+  },
+
+  hi: {
+    title: "स्कैम चेक",
+    ask: "किसी मैसेज पर शक है?",
+    lede: "उसे यहाँ पेस्ट करें। स्कैम चेक बताएगा कि उसमें क्या गड़बड़ लगती है और अब क्या करना चाहिए।",
+    label: "मैसेज",
+    placeholder: "मैसेज यहाँ पेस्ट करें या लिखें",
+    privacy_local: "जाँच इसी फ़ोन पर होती है। मैसेज न कहीं भेजा जाता है, न सेव होता है।",
+    privacy_links: "जाँच इसी फ़ोन पर होती है और मैसेज कभी सेव नहीं होता। सिर्फ़ उसके लिंक Google की असुरक्षित साइटों की सूची में देखे जाते हैं।",
+    tip: "हो सके तो पहले नाम, खाता नंबर और OTP हटा दें। लंबे नंबर अपने-आप छिप जाते हैं।",
+    check: "मैसेज जाँचें",
+    empty: "पहले कोई मैसेज पेस्ट करें, फिर ‘मैसेज जाँचें’ दबाएँ।",
+    examples: "या कोई उदाहरण आज़माएँ:",
+    ex_electricity: "बिजली बिल",
+    ex_kyc: "KYC अपडेट",
+    ex_job: "नौकरी का ऑफ़र",
+    ex_otp: "बैंक OTP",
+
+    v_likely_scam: "यह स्कैम लगता है।",
+    do_likely_scam: "लिंक न खोलें, नंबर पर कॉल न करें, और कोई कोड या PIN किसी को न बताएं।",
+    v_suspicious: "यह मैसेज संदिग्ध लगता है।",
+    do_suspicious: "अभी इस पर कुछ न करें। कंपनी से खुद पता करें, उसके असली ऐप से या अपने कार्ड या बिल पर छपे नंबर से।",
+    v_unsure: "स्कैम चेक इस मैसेज के बारे में पक्का नहीं कह सकता।",
+    do_unsure: "जानकारी बहुत कम है। सावधानी रखें, और भेजने वाले से किसी ऐसे नंबर पर पता करें जो आपके पास पहले से है।",
+    v_no_signs: "आम चेतावनी के कोई संकेत नहीं मिले।",
+    do_no_signs: "इसका मतलब यह नहीं कि मैसेज सुरक्षित है। अगर यह पैसे, कोड या क्लिक मांगे, तो पहले भेजने वाले से खुद पता करें।",
+
+    caption_marked: "निशान लगे शब्द नीचे दिए कारणों से जुड़े हैं।",
+    caption_plain: "मैसेज में कोई आम चेतावनी का संकेत नहीं मिला।",
+    noticed: "स्कैम चेक को क्या खटका",
+    noticed_none: "स्कैम चेक जिन संकेतों को देखता है, उनमें से कोई नहीं मिला।",
+    links_checking: "लिंक Google की असुरक्षित साइटों की सूची में देखे जा रहे हैं…",
+    links_bad: "Google इस लिंक को असुरक्षित मानता है: {hosts}",
+    links_clean: "ये लिंक Google की असुरक्षित सूची में नहीं हैं। नई स्कैम साइटें अक्सर सूची में नहीं होतीं, इसलिए इससे कुछ साबित नहीं होता।",
+    links_failed: "अभी लिंक की जाँच नहीं हो पाई। ऊपर का नतीजा उसके बिना है।",
+    link_reason: "इस मैसेज के एक लिंक को Google असुरक्षित मानता है",
+    lang_hint: "See in English",
+
+    next: "अब क्या करें",
+    lost_q: "लिंक खोल चुके हैं, कोड बता चुके हैं या पैसे भेज चुके हैं?",
+    lost_a_html: 'अभी 1930 पर कॉल करें (राष्ट्रीय साइबर अपराध हेल्पलाइन), फिर <a href="https://cybercrime.gov.in" rel="noopener" target="_blank" data-track="cybercrime">cybercrime.gov.in</a> पर शिकायत दर्ज करें।',
+    call: "1930 पर कॉल करें",
+    bank: "अपने बैंक को कार्ड पर या उसकी आधिकारिक वेबसाइट पर दिए नंबर पर कॉल करें, मैसेज में दिए नंबर पर कभी नहीं।",
+    report_q: "कोई नुकसान नहीं हुआ, पर धोखाधड़ी लगती है?",
+    report_a_html: '30 दिनों के भीतर <a href="https://sancharsaathi.gov.in/sfc/" rel="noopener" target="_blank" data-track="chakshu">sancharsaathi.gov.in/sfc</a> पर चक्षु में इसकी शिकायत करें।',
+    pib_q: "क्या यह भारत सरकार की किसी योजना के बारे में है?",
+    pib_a_html: 'इसे PIB फ़ैक्ट चेक को व्हाट्सऐप पर भेजें: <a href="https://wa.me/918799711259" rel="noopener" target="_blank" data-track="pib">+91 8799711259</a>।',
+    fine: "यह दूसरी राय है, गारंटी नहीं। स्कैम चेक गलत भी हो सकता है। अपना OTP, UPI PIN, कार्ड नंबर या CVV कभी किसी को न बताएं। पैसे पाने के लिए UPI PIN की ज़रूरत नहीं होती।",
+
+    helped_q: "क्या इससे आपको फ़ैसला करने में मदद मिली?",
+    yes: "हाँ",
+    no: "नहीं",
+    wrong: "यह नतीजा गलत है",
+    thanks: "धन्यवाद। आपका जवाब गिना गया, आपका मैसेज रखा नहीं गया।",
+    thanks_wrong: "बताने के लिए धन्यवाद। गलत नतीजे गिने जाते हैं ताकि जाँच को सुधारा जा सके।",
+
+    share: "यह नतीजा परिवार को भेजें",
+    share_note: "व्हाट्सऐप पर नतीजा जाता है, आपका मैसेज नहीं।",
+    share_text: "मैंने स्कैम चेक पर एक मैसेज जाँचा।\n\n{verdict}\n{reasons}\n{do}\n\nपैसे गए हैं? 1930 पर कॉल करें।\n{url}",
+    again: "दूसरा मैसेज जाँचें",
+
+    privacy_title: "स्कैम चेक आपके मैसेज के साथ क्या करता है",
+    privacy_html:
+      "<p><strong>आपका मैसेज</strong> इसी फ़ोन पर चलने वाले कोड से जाँचा जाता है। वह किसी को भेजा नहीं जाता और सेव नहीं होता।</p>" +
+      "{links}" +
+      "<p><strong>क्या गिना जाता है:</strong> कि एक जाँच हुई, उसका नतीजा, कौन-से चेतावनी संकेत मिले, आपका हाँ या नहीं, मदद वाले लिंक पर टैप, और आप कहाँ से आए (जैसे LinkedIn पर शेयर किया लिंक)। मैसेज का टेक्स्ट, नाम या नंबर कभी नहीं।</p>" +
+      "<p><strong>एक रैंडम ID</strong> इस ब्राउज़र में रखी जाती है ताकि दोबारा आने वालों को गिना जा सके। यह आपसे जुड़ी नहीं है। ब्राउज़र डेटा साफ़ करने पर हट जाती है।</p>" +
+      "<p><strong>कोई लॉगिन नहीं</strong> और कभी फ़ोन नंबर नहीं मांगा जाता।</p>",
+    privacy_links_html: "<p><strong>सिर्फ़ लिंक:</strong> मैसेज में मिले वेब लिंक, और कुछ नहीं, एक छोटी सेवा को भेजे जाते हैं जो Google Safe Browsing से पूछती है कि वे असुरक्षित माने गए हैं या नहीं। यह सेवा कुछ नहीं रखती।</p>",
+    made: "क्रुपा निर्मल का एक खुला प्रोजेक्ट, उन्हीं लोगों के साथ बना जिनके लिए है।",
+    contact: "कोई सवाल या गलत नतीजा?",
+  },
+};

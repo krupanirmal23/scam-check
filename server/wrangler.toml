@@ -1,0 +1,17 @@
+# Cloudflare Worker for the Scam Check link lookup.
+# Deploy from this folder: `npx wrangler deploy`. Steps in README.md.
+name = "scam-check-link-check"
+main = "link-check.js"
+compatibility_date = "2026-10-01"
+
+# No logs of request bodies: the Worker never logs, and observability stays off.
+[observability]
+enabled = false
+
+[vars]
+# Comma-separated list of sites allowed to call this Worker.
+# Add the live site's origin (e.g. https://<username>.github.io) before launch.
+ALLOWED_ORIGINS = "http://localhost:8080"
+
+# The Google Safe Browsing key is a secret, never in this file:
+#   npx wrangler secret put SAFE_BROWSING_API_KEY

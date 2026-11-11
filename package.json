@@ -1,0 +1,13 @@
+{
+  "name": "scam-check",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Paste a suspicious SMS, WhatsApp or UPI message and get a verdict and a next step.",
+  "scripts": {
+    "eval": "node eval/run.mjs --split test",
+    "eval:dev": "node eval/run.mjs --split dev",
+    "serve": "node serve.mjs",
+    "test:server": "node server/link-check.test.mjs"
+  },
+  "author": "Krupa Nirmal"
+}

@@ -1,0 +1,5 @@
+{
+  "_note": "Provisional. Set from synthetic discovery; must be re-set from real discovery before launch. See docs/METRICS.md.",
+  "max_missed_scam_rate": 10,
+  "max_false_alarm_rate": 10
+}

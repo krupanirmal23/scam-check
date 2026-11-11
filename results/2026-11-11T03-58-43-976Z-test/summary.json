@@ -1,0 +1,42 @@
+{
+  "run": "2026-11-11T03:58:43.976Z",
+  "rules_version": "rules-v1.1",
+  "split": "test",
+  "n": 55,
+  "scams": 26,
+  "genuine": 29,
+  "missed_scam_rate": 0,
+  "missed_scams_with_unsure": 0,
+  "false_alarm_rate": 10.3,
+  "false_alarm_rate_bank_otp": 11.1,
+  "unsure_rate": 0,
+  "by_lang": {
+    "en": {
+      "missed_scam_rate": 0,
+      "false_alarm_rate": 9.1,
+      "n": 41
+    },
+    "hinglish": {
+      "missed_scam_rate": 0,
+      "false_alarm_rate": 33.3,
+      "n": 9
+    },
+    "hi": {
+      "missed_scam_rate": 0,
+      "false_alarm_rate": 0,
+      "n": 5
+    }
+  },
+  "median_ms": 0,
+  "launch_bar": {
+    "missed_scam_rate": {
+      "max": 10,
+      "pass": true
+    },
+    "false_alarm_rate": {
+      "max": 10,
+      "pass": false
+    },
+    "pass": false
+  }
+}
